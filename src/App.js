@@ -26,7 +26,7 @@ export default function App() {
         </div>
         <p>
           <a
-            href="https://github.com/KasiaMiko/vanilla-weather-app"
+            href="https://https://github.com/KasiaMiko/weatherApp-react"
             target="_blank"
             rel="noreferrer"
           >
