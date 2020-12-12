@@ -1,0 +1,14 @@
+.card-body {
+  padding: 0;
+}
+
+.forecastIcon {
+  font-size: 28px;
+}
+
+.forecastTime {
+  font-size: 18px;
+}
+.forecastTemp {
+  font-size: 16px;
+}

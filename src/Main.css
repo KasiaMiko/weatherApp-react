@@ -1,0 +1,52 @@
+h1 {
+  size: 30px;
+  font-weight: 500;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #78838e;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+  text-align: center;
+}
+li:first-letter {
+  text-transform: capitalize;
+}
+.currentDay {
+  font-size: 30px;
+}
+.currentTime {
+  font-size: 22px;
+}
+.weatherCondition {
+  font-size: 22px;
+}
+.weatherIcon {
+  margin: 0 auto;
+  padding: 0px;
+  text-align: center;
+  font-size: 50px;
+}
+
+.temperature {
+  font-size: 50px;
+  text-align: center;
+  margin: 0;
+}
+.temperature strong {
+  font-size: 16px;
+  font-weight: 300;
+  position: relative;
+  top: -24px;
+  margin: 0;
+}
+.wind {
+  text-align: center;
+  font-size: 24px;
+}
