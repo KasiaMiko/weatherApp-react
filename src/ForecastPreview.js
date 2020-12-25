@@ -1,13 +1,18 @@
 import React from "react";
 import WeatherIcon from "./WeatherIcon";
+import "./ForecastPreview.css"
 
 export default function ForecastPreview (props){
-    return (
-    
+    function hours(){
+        let date= new Date(props.data.dt * 1000);
+        let hours= date.getHours();
+        return `${hours}:00`
+    }
+    return ( 
     <div className="col">
-     <h4 className="forecastIcon"> sun</h4>
-     <h5 className="forecastTime"> 16:00</h5>
-     <h5 class="forecastTemp"> 5 °C </h5>
+     <p className="forecastIcon"> <WeatherIcon code={props.data.weather[0].icon}/> </p>
+     <h5 className="forecastTime"> {hours()}</h5>
+     <h5 class="forecastTemp"> {Math.round(props.data.main.temp)} °C </h5>
    </div>
   
     )

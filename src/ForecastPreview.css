@@ -1,0 +1,14 @@
+.forecastIcon canvas {
+  width: 42px;
+  display: block;
+  margin: 0 auto;
+}
+
+.forecastTime {
+  font-size: 18px;
+  text-align: center;
+}
+.forecastTemp {
+  font-size: 16px;
+  text-align: center;
+}
