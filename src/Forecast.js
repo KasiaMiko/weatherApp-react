@@ -1,15 +1,32 @@
-import React from "react";
+import React, {useState} from "react";
 import "./Forecast.css";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import ForecastPreview from "./ForecastPreview";
+import axios from "axios";
 
-export default function Forecast() {
+export default function Forecast(props) {
+  const [loaded, setLoaded]= useState(false);
+  const [forecast, setForecast]= useState(null);
+
+  function handleForecast (response){
+    setForecast(response.data);
+    setLoaded(true);
+  }
+  if (loaded && props.city === forecast.city.name){
   return (
-  <div class="form-group">]
-    <div className="col">
-     <h4 className="forecastIcon"> sun</h4>
-     <h5 className="forecastTime"> 16:00</h5>
-     <h5 class="forecastTemp"> 5 °C </h5>
-   </div>
-   </div> 
-  );
+    <div className="row">
+  <ForecastPreview />
+  <ForecastPreview />
+  <ForecastPreview />
+  <ForecastPreview />
+  <ForecastPreview />
+  <ForecastPreview />
+  </div>
+  );}
+  else {
+let apiKey="cac6eb1808e7ad8b2e537949ab1a8c09"
+let url=`https://api.openweathermap.org/data/2.5/forecast?q=${props.city}&appid=${apiKey}&units=metric`;
+axios.get(url).then(handleForecast);
+return null;
+  }
+
 }

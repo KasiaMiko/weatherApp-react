@@ -27,7 +27,7 @@ export default function Main(props) {
           <ul>
             <li className="temperature">
               {" "}
-              {props.data.temperature} <strong>°C</strong>{" "}
+              {Math.round(props.data.temperature)} <strong>°C</strong>{" "}
             </li>
             <li className="wind"> Wind: {props.data.wind} km/h</li>
           </ul>

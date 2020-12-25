@@ -44,6 +44,7 @@ export default function Search(props) {
           type="text"
           id="search-text-input"
           autocomplete="off"
+          autoFocus="on"
           placeholder="In which city would you like to check the weather?"
           onChange={handleCityChange}
         />
